@@ -9,7 +9,7 @@ class Figure(ABC):
     """
 
     @abstractmethod
-    def area(self):
+    def area(self) -> float:
         """Вычисляет площадь фигуры.
 
         Returns:
@@ -25,7 +25,7 @@ class Circle(Figure):
         radius (float): Радиус круга.
     """
 
-    def __init__(self, radius):
+    def __init__(self, radius: float):
         """Инициализация круга с заданным радиусом.
 
         Args:
@@ -35,7 +35,7 @@ class Circle(Figure):
             raise ValueError("Некорректное значение радиуса.")
         self.radius = radius
 
-    def area(self):
+    def area(self) -> float:
         """Вычисляет площадь круга.
 
         Returns:
@@ -53,7 +53,7 @@ class Triangle(Figure):
         c (float): Длина стороны c.
     """
 
-    def __init__(self, a, b, c):
+    def __init__(self, a: float, b: float, c: float):
         """Инициализация треугольника с заданными сторонами.
 
         Args:
@@ -68,7 +68,7 @@ class Triangle(Figure):
         self.c = c
 
     @staticmethod
-    def is_valid(a, b, c):
+    def is_valid(a: float, b: float, c: float) -> bool:
         """Проверяет, образуют ли заданные стороны треугольник.
 
         Использует теорему о неравенстве треугольника.
@@ -83,7 +83,7 @@ class Triangle(Figure):
         """
         return a + b > c and a + c > b and b + c > a
 
-    def area(self):
+    def area(self) -> float:
         """Вычисляет площадь треугольника.
 
         Использует формулу Герона.
@@ -94,7 +94,7 @@ class Triangle(Figure):
         p = (self.a + self.b + self.c) / 2
         return math.sqrt(p * (p - self.a) * (p - self.b) * (p - self.c))
 
-    def is_right_angled(self):
+    def is_right_angled(self) -> bool:
         """Проверяет, является ли треугольник прямоугольным.
 
         Использует теорему Пифагора.
