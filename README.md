@@ -13,8 +13,8 @@
 Для использования этой библиотеки вам нужно иметь Python установленным на вашей системе. После установки Python вы можете клонировать этот репозиторий и импортировать библиотеку в ваш проект.
 
 ```bash
-git clone https://github.com/Djama1GIT/test_assignment_mindbox.git
-cd test_assignment_mindbox
+git clone https://github.com/Djama1GIT/test-assignment-mindbox.git
+cd test-assignment-mindbox
 ```
 
 ## Запуск тестов
